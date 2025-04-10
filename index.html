@@ -13,6 +13,7 @@
       background: #1a1a1a;
       color: #fff;
       line-height: 1.6;
+      text-align: center; /* Center all text by default */
     }
     header {
       position: fixed;
@@ -54,6 +55,13 @@
     p, li {
       font-size: 1.1rem;
     }
+    a {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #fff;
+    }
     ul {
       list-style: none;
       padding: 0;
@@ -65,7 +73,16 @@
     img {
       max-width: 100%;
       height: auto;
-      margin: 1rem 0;
+      margin: 1rem auto; /* Center images */
+      display: block; /* Ensure block-level centering */
+      border: 2px solid #ffcc00;
+    }
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin: 1rem auto; /* Center video */
+      display: block; /* Ensure block-level centering */
       border: 2px solid #ffcc00;
     }
     footer {
@@ -91,7 +108,7 @@
     <div class="section">
       <h2>WHAT I DO</h2>
       <p>
-        I’m Sean J. Smith DJTP, a Full Sail University grad with an Associate’s in Computer Science, working toward a PhD. I build websites, self study at Harvard University's CS50 program fully free online (through this <a href="https://cs50.harvard.edu/x/2020/psets/1/hello/">link</a>) as well as solve tech challenges, and craft authentic narratives—all with zero budget and maximum hustle. Let’s create something bold together.
+        I’m Sean J. Smith DJTP, a Full Sail University grad with an Associate’s in Computer Science, working toward a PhD. I build websites, self-study at Harvard University’s CS50 program fully free online (through this <a href="https://cs50.harvard.edu/x/2020/psets/1/hello/">link</a>) as well as solve tech challenges, and craft authentic narratives—all with zero budget and maximum hustle. Let’s create something bold together.
       </p>
     </div>
 
@@ -107,7 +124,7 @@
     <div class="section">
       <h2>WHO I AM</h2>
       <p>
-        Sean J. Smith DJTP, founder of The Real Established Portal, HRP Tech Advisors, BiFrost Collective, BitFrost Coin, and the HighSail Game Studio. With an Associate’s from Full Sail University and a PhD in progress, I’m wired for tech and driven to innovate. I’ve honed my coding skills and DIY spirit to turn ideas into reality—ready for your next gig.
+        Sean J. Smith DJTP, founder of The Real Established Portal. With an Associate’s from Full Sail University and a PhD in progress, I’m wired for tech and driven to innovate. I’ve honed my coding skills and DIY spirit to turn ideas into reality—ready for your next gig.
       </p>
       <img src="Reprealdiamn.jpg" alt="Diamond Project Image">
     </div>
@@ -120,7 +137,8 @@
         <li><strong>Why free?</strong> Full Sail taught me to code, not to spend—watch me shine with $0.</li>
       </ul>
     </div>
-<div class="section">
+
+    <div class="section">
       <h2>CONTACT ME</h2>
       <p>Ready to collaborate? Reach out through any of these channels:</p>
       <ul>
