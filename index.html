@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Real Established Portal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -32,9 +32,12 @@
       font-size: 1rem;
       cursor: pointer;
     }
+    header button:hover, header a:hover {
+      color: #fff;
+    }
     main {
       padding: 6rem 2rem 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
     h1 {
@@ -44,20 +47,28 @@
       margin-bottom: 1rem;
     }
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: #ffcc00;
-      margin-top: 2rem;
+      margin: 2rem 0 1rem;
     }
-    p {
+    p, li {
       font-size: 1.1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li:before {
+      content: "• ";
+      color: #ffcc00;
     }
     footer {
       text-align: center;
       padding: 2rem;
       background: #333;
     }
-    .skip-link:hover, button:hover {
-      color: #fff;
+    .section {
+      margin-bottom: 3rem;
     }
   </style>
 </head>
@@ -68,29 +79,43 @@
   </header>
   <main id="content">
     <h1>THE REAL ESTABLISHED PORTAL</h1>
-    <p>Crafting bold, real stories that hit hard—on any screen, anywhere.</p>
-    <section>
+    <p>Where tech meets grit—crafting real solutions and stories that resonate.</p>
+
+    <div class="section">
       <h2>WHAT WE DO</h2>
-      <p>We turn raw ideas into stories that stick. No fluff, just truth. Collaborate with us to portal into something extraordinary.</p>
-    </section>
-    <section>
-      <h2>RECENT PROJECTS</h2>
-      <p><strong>Street Echoes</strong> - A short film shot on a phone, capturing the pulse of city life.</p>
-      <p><strong>Breakout</strong> - A web series in the works, blending grit and dreams.</p>
-    </section>
-    <section>
-      <h2>WHO I AM</h2>
-      <p>[Your Name], founder and one-man crew. Armed with a PhD in CS and a passion for real talk, I’m here to shake up storytelling.</p>
-    </section>
-    <section>
-      <h2>FAQ</h2>
-      <p><strong>Got work?</strong> Yes—tell your sister I’m ready!</p>
-      <p><strong>Pitch ideas?</strong> Follow @realportalvibes for updates.</p>
-    </section>
+      <p>
+        We’re a team with a passion for tech and creativity, turning raw ideas into impactful realities. Whether it’s building websites, solving challenges, or telling stories, we deliver with hustle and heart. Collaborate with us to create something bold.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>RECENT & UPCOMING PROJECTS</h2>
+      <ul>
+        <li><strong>Project One</strong> - A short film shot on a smartphone, capturing real-world vibes. Paired with a custom promo site built from scratch.</li>
+        <li><strong>Project Two</strong> - A web series in development—raw tales of ambition. Planning a free, interactive prototype.</li>
+        <li><strong>Project Three</strong> - This site! A showcase of skills using free tools, ready for your story.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>WHO WE ARE</h2>
+      <p>
+        A collective fueled by education and drive—think tech grads with big dreams. We blend coding know-how with a DIY spirit to turn nothing into something. Ready to tackle your next gig with grit and innovation.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>FREQUENTLY ASKED QUESTIONS</h2>
+      <ul>
+        <li><strong>Need a website?</strong> We’ll build it free with open-source tools—reach out!</li>
+        <li><strong>Hiring?</strong> We’re available—bring us your challenges.</li>
+        <li><strong>Why free?</strong> We thrive on skills, not cash—watch us shine with $0.</li>
+      </ul>
+    </div>
   </main>
   <footer>
-    <p>FOLLOW @REALPORTALVIBES TO JOIN THE JOURNEY.</p>
-    <p>Built by [Your Name]</p>
+    <p>FOLLOW @REALPORTALVIBES FOR THE REAL STUFF</p>
+    <p>Built from Scratch | Hosted on GitHub Pages</p>
   </footer>
 </body>
 </html>
