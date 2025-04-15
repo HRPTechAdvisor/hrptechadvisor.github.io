@@ -43,7 +43,7 @@
     
     header {
       position: fixed;
-      top: 0;
+      top: 60px;
       width: 100%;
       background: rgba(10,10,20,0.95);
       padding: 1rem;
@@ -59,6 +59,11 @@
                 rgba(0,0,0,0.9) 80%, 
                 rgba(10,10,20,0.9) 100%);
       animation: borderGlow 3s infinite alternate;
+      transition: transform 0.3s ease;
+    }
+    
+    header.hidden {
+      transform: translateY(-100%);
     }
     
     @keyframes borderGlow {
@@ -100,25 +105,25 @@
       gap: 1.5rem;
       z-index: 1100;
       backdrop-filter: blur(4px);
+      transition: transform 0.3s ease;
+    }
+
+    .social-banner.hidden {
+      transform: translateY(-100%);
     }
 
     .social-banner a {
       display: inline-block;
       transition: all 0.3s ease;
+      color: var(--primary);
+      font-size: 2rem;
+      text-decoration: none;
     }
 
-    .social-banner img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 2px solid var(--primary);
-      box-shadow: var(--neon-glow);
-      transition: all 0.3s ease;
-    }
-
-    .social-banner img:hover {
+    .social-banner a:hover {
+      color: var(--secondary);
       transform: scale(1.2);
-      box-shadow: 0 0 15px var(--primary), 0 0 25px var(--secondary);
+      text-shadow: 0 0 15px var(--primary), 0 0 25px var(--secondary);
     }
     
     main {
@@ -419,33 +424,20 @@
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       }
       .section, .highlight-section { padding: 1.5rem; }
-      .social-banner img {
-        width: 30px;
-        height: 30px;
+      .social-banner a {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="social-banner">
-    <a href="https://www.twitch.tv/djtrippiepea" target="_blank">
-      <img src="https://cdn.pixabay.com/photo/2021/11/02/15/30/twitch-6762727_960_720.png" alt="Twitch Logo">
-    </a>
-    <a href="https://youtube.com/@djtrippiepea" target="_blank">
-      <img src="https://cdn.pixabay.com/photo/2021/11/02/15/30/youtube-6762728_960_720.png" alt="YouTube Logo">
-    </a>
-    <a href="https://facebook.com/therealestablishedportal" target="_blank">
-      <img src="https://cdn.pixabay.com/photo/2021/11/02/15/30/facebook-6762725_960_720.png" alt="Facebook Logo">
-    </a>
-    <a href="https://instagram.com/therealestablishedportal" target="_blank">
-      <img src="https://cdn.pixabay.com/photo/2021/11/02/15/30/instagram-6762726_960_720.png" alt="Instagram Logo">
-    </a>
-    <a href="https://linkedin.com/in/hrptechadvisor" target="_blank">
-      <img src="https://cdn.pixabay.com/photo/2021/11/02/15/30/linkedin-6762729_960_720.png" alt="LinkedIn Logo">
-    </a>
-    <a href="https://x.com/DJTrippiePea" target="_blank">
-      <img src="https://cdn.pixabay.com/photo/2023/07/26/07/41/x-8151160_960_720.png" alt="X Logo">
-    </a>
+    <a href="https://www.twitch.tv/djtrippiepea" target="_blank"><i class="fab fa-twitch"></i></a>
+    <a href="https://youtube.com/@djtrippiepea" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://facebook.com/therealestablishedportal" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/therealestablishedportal" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com/in/hrptechadvisor" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://x.com/DJTrippiePea" target="_blank"><i class="fab fa-x-twitter"></i></a>
   </div>
 
   <header>
@@ -761,101 +753,24 @@
         </div>
         <div class="project-card">
           <h3><i class="fas fa-gamepad"></i> Conway's Game of Life</h3>
-          <p>A simulation of Conway’s Game of Life, a cellular automaton that evolves based on set rules.</p>
-          <div style="margin: 1rem 0;">
-            <span class="status-indicator status-completed"></span>
-            <span>Completed</span>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Pygame</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <h3><i class="fas fa-code"></i> GDScript Projects</h3>
-          <p>Multiple game development projects using Godot Engine and GDScript.</p>
-          <div style="margin: 1rem 0;">
-            <span class="status-indicator status-completed"></span>
-            <span>Completed</span>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">GDScript</span>
-            <span class="tech-badge">Godot</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <h3><i class="fas fa-film"></i> Street Echoes</h3>
-          <p>A short film shot on my phone, capturing raw city vibes. Used HTML/CSS skills from Full Sail to mock up a promo site.</p>
-          <div style="margin: 1rem 0;">
-            <span class="status-indicator status-completed"></span>
-            <span>Completed</span>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">HTML</span>
-            <span class="tech-badge">CSS</span>
-          </div>
-        </div>
-      </div>
-    </section>
+          <p>A simulation of Conway’s Game of Life, a cellular automatonAll rights reserved.</p>
+</footer>
+<script>
+  let lastScrollTop = 0;
+  window.addEventListener('scroll', () => {
+    const socialBanner = document.querySelector('.social-banner');
+    const header = document.querySelector('header');
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    <section id="music" class="section">
-      <h2>🎵 Featured Music</h2>
-      <p>Listen to original tracks produced by Sean J. Smith DJTP:</p>
-      <iframe
-        src="https://www.bandlab.com/embed/?id=064f87ed-b119-f011-aaa7-0022484892d6"
-        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-        allowfullscreen>
-      </iframe>
-      <p>Also check out more music on YouTube:</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/jup9oaq7CV0?si=9rO0aKRbSs612dcF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-
-    <section id="visual-vibes" class="section">
-      <h2>🌟 Visual Vibes</h2>
-      <div class="image-grid">
-        <img src="RPrealestablished.jpg" alt="Real Established Logo">
-        <img src="Repdiamondsreal.jpg" alt="Diamonds Real Image">
-        <img src="minrep.jpg" alt="Minimal REP Image">
-        <img src="repdiamondreal.jpg" alt="REP Diamond Real Image">
-      </div>
-    </section>
-
-    <section id="twitch" class="section">
-      <h2>📺 Join Me Live on Twitch</h2>
-      <p>Catch me streaming live on Twitch! Join the fun and interact with me in real-time:</p>
-      <div class="twitch-link">
-        <a href="https://www.twitch.tv/djtrippiepea" target="_blank">Follow me on Twitch @DJTrippiePea</a>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <h2>❓ Frequently Asked Questions</h2>
-      <ul>
-        <li>Need a website? I’ll build it free with GitHub Pages—hit me up!</li>
-        <li>Hiring? I’m available—bring me your tech or creative challenges.</li>
-        <li>Why free? Full Sail taught me to code, not to spend—watch me shine with $0.</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>📬 Contact Me</h2>
-      <p>Ready to collaborate? Reach out through any of these channels:</p>
-      <ul>
-        <li>Phone: 224-828-9966</li>
-        <li>Email: <a href="mailto:sjsmith5@student.fullsail.edu">sjsmith5@student.fullsail.edu</a></li>
-        <li>Personal Email: <a href="mailto:djtrippiepea@gmail.com">djtrippiepea@gmail.com</a></li>
-        <li>Facebook: <a href="https://facebook.com/therealestablishedportal" target="_blank">facebook.com/therealestablishedportal</a></li>
-        <li>Instagram: <a href="https://instagram.com/therealestablishedportal" target="_blank">instagram.com/therealestablishedportal</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/hrptechadvisor" target="_blank">linkedin.com/in/hrptechadvisor</a></li>
-        <li>X: <a href="https://x.com/DJTrippiePea" target="_blank">x.com/DJTrippiePea</a></li>
-        <li>YouTube: <a href="https://youtube.com/@djtrippiepea" target="_blank">youtube.com/@djtrippiepea</a></li>
-        <li>Twitch: <a href="https://www.twitch.tv/djtrippiepea" target="_blank">www.twitch.tv/djtrippiepea</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 The Real Established Portal. All rights reserved.</p>
-  </footer>
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+      socialBanner.classList.add('hidden');
+      header.classList.add('hidden');
+    } else {
+      socialBanner.classList.remove('hidden');
+      header.classList.remove('hidden');
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
 </body>
 </html>
