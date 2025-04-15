@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🚀 Sean J. Smith DJTP | The Real Established Portal</title>
+  <meta property="og:title" content="Sean J. Smith DJTP | Visionary Technologist">
+  <meta property="og:description" content="Where tech meets grit—crafting real solutions and stories that resonate.">
+  <meta property="og:image" content="https://hrptechadvisor.github.io/images/me.jpg">
+  <meta property="og:url" content="https://hrptechadvisor.github.io">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sean J. Smith DJTP | Visionary Technologist">
+  <meta name="twitter:description" content="Where tech meets grit—crafting real solutions and stories that resonate.">
+  <meta name="twitter:image" content="https://hrptechadvisor.github.io/images/me.jpg">
+  <meta name="keywords" content="Sean J. Smith DJTP, tech portfolio, app development, blockchain, AI, cryptocurrency">
+  <title>🚀 Sean J. Smith DJTP | Visionary Technologist</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@700&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <style>
     :root {
       --primary: #00ffcc;
@@ -22,7 +33,7 @@
       padding: 0;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
-                  url('recordback.jpg') no-repeat center center fixed;
+                  url('images/recordback.jpg') no-repeat center center fixed;
       background-size: cover;
       color: var(--light);
       line-height: 1.8;
@@ -52,6 +63,20 @@
     @keyframes borderGlow {
       0% { border-bottom-color: rgba(0, 255, 204, 0.3); }
       100% { border-bottom-color: rgba(255, 0, 170, 0.5); }
+    }
+    
+    header nav a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    header nav a:hover {
+      color: var(--light);
+      transform: scale(1.05);
     }
     
     main {
@@ -100,7 +125,7 @@
       border-color: var(--primary);
     }
     
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       font-family: 'Orbitron', sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -115,6 +140,11 @@
       margin-bottom: 1.5rem;
       text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
       animation: pulse 2.5s infinite alternate;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.02); }
     }
     
     h2 {
@@ -135,6 +165,88 @@
       background: linear-gradient(90deg, var(--primary), var(--secondary));
     }
     
+    h3, h4 {
+      color: var(--accent);
+      margin-top: 0;
+    }
+    
+    p, li {
+      font-size: 1.1rem;
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    
+    a:hover {
+      color: var(--light);
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    ul li:before {
+      content: "• ";
+      color: var(--accent);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem auto;
+      display: block;
+      border: 2px solid var(--primary);
+      transition: all 0.5s ease;
+    }
+    
+    img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px var(--primary);
+    }
+    
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin: 1rem auto;
+      display: block;
+      border: 2px solid var(--primary);
+    }
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border: 2px solid var(--primary);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+      animation: fadeInImg 0.5s ease-in;
+    }
+    
+    .image-grid img:hover {
+      transform: scale(1.03);
+    }
+    
+    .image-grid img:nth-child(1) { animation-delay: 0.1s; }
+    .image-grid img:nth-child(2) { animation-delay: 0.2s; }
+    .image-grid img:nth-child(3) { animation-delay: 0.3s; }
+    .image-grid img:nth-child(4) { animation-delay: 0.4s; }
+    
+    @keyframes fadeInImg {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
     .tech-badge {
       display: inline-block;
       background: rgba(0,0,0,0.5);
@@ -153,20 +265,6 @@
       background: var(--primary);
       color: var(--dark);
       transform: scale(1.1);
-    }
-    
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 1rem auto;
-      display: block;
-      border: 2px solid var(--primary);
-      transition: all 0.5s ease;
-    }
-    
-    img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px var(--primary);
     }
     
     .status-indicator {
@@ -192,40 +290,81 @@
       box-shadow: 0 0 10px #00ff66;
     }
     
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      margin: 1rem auto;
-      display: block;
-      border: 2px solid var(--primary);
-      box-shadow: 0 0 30px rgba(255, 204, 0, 0.3);
+    .status-proposal {
+      background: #ff66cc;
+      box-shadow: 0 0 10px #ff66cc;
+    }
+    
+    .twitch-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+    
+    .twitch-link img {
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0,0,0,0.9);
+      margin-top: 4rem;
+      border-top: 1px solid rgba(0, 255, 204, 0.2);
     }
     
     @media (max-width: 768px) {
+      header nav a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+      }
       h1 { font-size: 2.5rem; }
       h2 { font-size: 1.8rem; }
+      h3 { font-size: 1.4rem; }
+      iframe { height: 200px; }
       .project-showcase { grid-template-columns: 1fr; }
-      iframe { height: 250px; }
+      .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <a href="#content" class="skip-link">SKIP TO CONTENT</a>
-    <button id="menu-button">OPEN MENU</button>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#music">Music</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#projects">Projects</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#skills">Skills</a>
+      <a href="#vision">Vision</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main id="content">
-    <section class="section">
-      <h2>FEATURED MUSIC</h2>
+  <main>
+    <section id="hero">
+      <h1>Sean J. Smith DJTP</h1>
+      <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+        Building the future through disruptive technology ventures, innovative apps, 
+        and decentralized systems that bridge the physical and digital worlds.
+      </p>
+      <img src="images/me.jpg" alt="Sean J. Smith" style="width: 200px; border-radius: 50%; margin: 2rem auto; border: 3px solid var(--primary);">
+    </section>
+
+    <section id="music">
+      <h2>🎵 Featured Music</h2>
       <p>Listen to original tracks produced by Sean J. Smith DJTP:</p>
       <iframe
         src="https://www.bandlab.com/embed/?id=064f87ed-b119-f011-aaa7-0022484892d6"
         sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
         allowfullscreen>
       </iframe>
-
       <p>Also check out more music on Soundtrap:</p>
       <iframe 
         src="https://www.soundtrap.com/studio/vp_yZrR5Riu5wLqDEoinWw/"
@@ -235,76 +374,65 @@
       </iframe>
     </section>
 
-    <h1>THE REAL ESTABLISHED PORTAL</h1>
-    <p>Where tech meets grit—crafting real solutions and stories that resonate.</p>
-    <img src="RPrealestablished.jpg" alt="The Real Established Portal Logo" style="max-width: 400px;">
-
-    <section class="section">
-      <h2>WHAT I DO</h2>
-      <p>
-        I'm Sean J. Smith DJTP, a Full Sail University grad with an Associate's in Computer Science, working toward a PhD. I build websites, self-study at Harvard University's CS50 program fully free online (through this <a href="https://cs50.harvard.edu/x/2020/psets/1/hello/" style="color: var(--accent);">link</a>) as well as solve tech challenges, and craft authentic narratives—all with zero budget and maximum hustle. Let's create something bold together.
-      </p>
-      <div class="tech-badges">
-        <span class="tech-badge">Web Development</span>
-        <span class="tech-badge">AI Integration</span>
-        <span class="tech-badge">Blockchain</span>
-        <span class="tech-badge">Quantum Computing</span>
+    <section id="about">
+      <h2>ℹ️ Who I Am</h2>
+      <div style="background: var(--section-bg); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary);">
+        <p>
+          I'm Sean J. Smith DJTP, founder of The Real Established Portal. With an Associate’s from Full Sail University and a PhD in progress, I’m wired for tech and driven to innovate. I build websites, self-study at Harvard University’s CS50 program fully free online (through this <a href="https://cs50.harvard.edu/x/2025/">CS50</a>), solve tech challenges, and craft authentic narratives—all with zero budget and maximum hustle. I also write insightful <a href="https://medium.com/@djtrippiepea">blog posts on Medium</a> about tech and innovation. Let’s create something bold together.
+        </p>
+        <img src="images/Reprealdiamn.jpg" alt="Diamond Project Image">
       </div>
     </section>
 
-    <section class="section">
-      <h2>RECENT & UPCOMING PROJECTS</h2>
-      <ul>
-        <li><strong>Street Echoes</strong> - A short film shot on my phone, capturing raw city vibes. Used HTML/CSS skills from Full Sail to mock up a promo site.</li>
-        <li><strong>Breakout</strong> - A web series idea in the works—gritty tales of ambition. Planning a free GitHub Pages prototype.</li>
-        <li><strong>This Site</strong> - Built from scratch at hrptechadvisor.github.io to showcase my skills and land work.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>WHO I AM</h2>
-      <p>
-        Sean J. Smith DJTP, founder of The Real Established Portal. With an Associate's from Full Sail University and a PhD in progress, I'm wired for tech and driven to innovate. I've honed my coding skills and DIY spirit to turn ideas into reality—ready for your next gig.
-      </p>
-      <img src="Reprealdiamn.jpg" alt="Diamond Project Image" style="max-width: 500px;">
-    </section>
-
-    <section class="section">
-      <h2>VISUAL VIBES</h2>
-      <div class="image-grid">
-        <img src="me.jpg" alt="Sean J. Smith">
-        <img src="flag.jpg" alt="Flag Vibe">
-        <img src="realportal.jpg" alt="The Real Portal">
-        <img src="Repdiamondsreal.jpg" alt="The Real Est. Portal Logo">
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>JOIN ME LIVE ON TWITCH</h2>
-      <p>Catch me streaming live on Twitch! Join the fun and interact with me in real-time:</p>
-      <div class="twitch-link" style="display: flex; align-items: center; justify-content: center; margin-top: 2rem; font-size: 1.2rem; color: var(--primary);">
-        <a href="https://www.twitch.tv/djtrippiepea" target="_blank" style="display: flex; align-items: center; color: var(--primary); text-decoration: none;">
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/3fb2ba73-f9ef-49c8-a990-2810512f5dd4-profile_image-70x70.png" alt="DJTrippiePea Profile Picture" width="70" height="70" style="border-radius: 50%; margin-right: 1rem; border: 2px solid var(--primary);">
-          <span>Follow me on Twitch @DJTrippiePea</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>FREQUENTLY ASKED QUESTIONS</h2>
-      <ul>
-        <li><strong>Need a website?</strong> I'll build it free with GitHub Pages—hit me up!</li>
-        <li><strong>Hiring?</strong> I'm available—bring me your tech or creative challenges.</li>
-        <li><strong>Why free?</strong> Full Sail taught me to code, not to spend—watch me shine with $0.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>PORTFOLIO PROJECTS</h2>
+    <section id="ventures">
+      <h2>🚀 My Ventures</h2>
       <div class="project-showcase">
         <div class="project-card">
-          <h3><i class="fas fa-heartbeat"></i> The Portal OS</h3>
-          <p>Life management app with health tracking, smart shopping, AI coaching, and financial tools.</p>
+          <h3><i class="fas fa-gamepad"></i> HighSail Game Studio</h3>
+          <p>Cutting-edge game development studio pushing boundaries in interactive entertainment and immersive technologies.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">Unity</span>
+            <span class="tech-badge">Unreal</span>
+            <span class="tech-badge">WebGL</span>
+            <span class="tech-badge">GDScript</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-microchip"></i> HRP Tech Advisor</h3>
+          <p>Technology consulting firm specializing in innovative solutions for businesses navigating digital transformation.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">AI</span>
+            <span class="tech-badge">Blockchain</span>
+            <span class="tech-badge">IoT</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-users"></i> BiFrost Collective</h3>
+          <p>Creative collective merging technology and art to build transformative digital experiences.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">NFTs</span>
+            <span class="tech-badge">VR</span>
+            <span class="tech-badge">AR</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-coins"></i> BitFrost Coin</h3>
+          <p>Next-generation cryptocurrency designed for speed, security, and real-world utility.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">Blockchain</span>
+            <span class="tech-badge">Smart Contracts</span>
+            <span class="tech-badge">Web3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>🛠️ Current Projects</h2>
+      <div class="project-showcase">
+        <div class="project-card">
+          <h3><i class="fas fa-heartbeat"></i> WellnessPro App</h3>
+          <p>Comprehensive wellness platform for PHP providers and fitness coaches featuring AI-driven health insights, client management, and treatment tracking.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-in-progress"></span>
             <span>In Development</span>
@@ -315,175 +443,188 @@
             <span class="tech-badge">AI</span>
           </div>
         </div>
-        
         <div class="project-card">
-          <h3><i class="fas fa-utensils"></i> Nutrition Tracker</h3>
-          <p>Food scanning and personalized nutrition recommendations with barcode scanning.</p>
+          <h3><i class="fas fa-home"></i> RentEase Platform</h3>
+          <p>Blockchain-based property management system connecting landlords and tenants with smart contracts, automated payments, and maintenance tracking.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-in-progress"></span>
             <span>In Development</span>
           </div>
+          <div class="tech-badges">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Solidity</span>
+            <span class="tech-badge">Node.js</span>
+          </div>
         </div>
-        
         <div class="project-card">
-          <h3><i class="fas fa-chart-line"></i> Stock Prediction App</h3>
-          <p>AI-powered stock predictions with customizable time intervals.</p>
+          <h3><i class="fas fa-brain"></i> The Portal</h3>
+          <p>An all-in-one app for health tracking, smart shopping, life coaching, and AI-driven insights, featuring health & nutrition scanners, shopping assistance, and premium services.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Swift</span>
+            <span class="tech-badge">Kotlin</span>
+            <span class="tech-badge">ML</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-utensils"></i> Nutrition Tracker</h3>
+          <p>An app to track and manage nutrition, integrating features like food scanning and personalized health recommendations.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Flutter</span>
+            <span class="tech-badge">Firebase</span>
+            <span class="tech-badge">AI</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-calculator"></i> Calculator Application</h3>
+          <p>A calculator app built with a button factory, processor singleton, and exception handling, using the Shunting Yard Algorithm.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">wxWidgets</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-mobile-alt"></i> Android Studio Practice</h3>
+          <p>Developing an Android app with rounded corners, layout refinement, and accessibility improvements.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">Android Studio</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-briefcase"></i> LinkedIn & Resume</h3>
+          <p>Building a standout LinkedIn profile and resume showcasing skills and achievements in tech and innovation.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">LinkedIn</span>
+            <span class="tech-badge">Documentation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>💼 Complete Portfolio</h2>
+      
+      <h3 style="color: var(--accent); margin-top: 2rem;">Upcoming Projects</h3>
+      <div class="project-showcase">
+        <div class="project-card">
+          <h4><i class="fas fa-chart-line"></i> Stock Prediction App</h4>
+          <p>A simple stock prediction app with a search bar for users to receive predictions for various time intervals.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-planned"></span>
             <span>Planned</span>
           </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">TensorFlow</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h4><i class="fas fa-coins"></i> Portal Eco Coin (PEC)</h4>
+          <p>A cryptocurrency project focused on sustainability and eco-friendly applications.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-planned"></span>
+            <span>Planned</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Blockchain</span>
+            <span class="tech-badge">Smart Contracts</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h4><i class="fas fa-robot"></i> AI Education Discord Bot</h4>
+          <p>A proposal for AI integration in education, using a Discord bot with custom knowledge base and academic integrity rules.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-proposal"></span>
+            <span>Proposal Stage</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Discord API</span>
+            <span class="tech-badge">AI</span>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <h2>COMPLETED PROJECTS</h2>
+      
+      <h3 style="color: var(--accent); margin-top: 2rem;">Completed Projects</h3>
       <div class="project-showcase">
         <div class="project-card">
-          <h3><i class="fas fa-home"></i> Landlord Community App</h3>
-          <p>Property management platform connecting landlords and tenants.</p>
+          <h4><i class="fas fa-home"></i> Landlord Community App</h4>
+          <p>A community app designed for landlords to manage properties and communicate with tenants.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-completed"></span>
             <span>Completed</span>
           </div>
+          <div class="tech-badges">
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Node.js</span>
+          </div>
         </div>
-        
         <div class="project-card">
-          <h3><i class="fas fa-gamepad"></i> Conway's Game of Life</h3>
-          <p>Interactive simulation of the classic cellular automaton.</p>
+          <h4><i class="fas fa-gamepad"></i> Conway's Game of Life</h4>
+          <p>A simulation of Conway’s Game of Life, a cellular automaton that evolves based on set rules.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-completed"></span>
             <span>Completed</span>
           </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Pygame</span>
+          </div>
         </div>
-        
         <div class="project-card">
-          <h3><i class="fas fa-code"></i> GDScript Projects</h3>
-          <p>Game development projects using Godot Engine.</p>
+          <h4><i class="fas fa-code"></i> GDScript Projects</h4>
+          <p>Multiple game development projects using Godot Engine and GDScript.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-completed"></span>
             <span>Completed</span>
           </div>
+          <div class="tech-badges">
+            <span class="tech-badge">GDScript</span>
+            <span class="tech-badge">Godot</span>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>TECHNICAL SKILLS</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
-        <div style="background: var(--section-bg); padding: 1rem; border-radius: 8px;">
-          <h4 style="color: var(--accent); margin-top: 0;">Languages</h4>
-          <ul style="list-style: none; padding: 0;">
-            <li>C++</li>
-            <li>Python</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>GDScript</li>
-          </ul>
+        <div class="project-card">
+          <h4><i class="fas fa-film"></i> Street Echoes</h4>
+          <p>A short film shot on my phone, capturing raw city vibes, with a promo site built using HTML/CSS.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-completed"></span>
+            <span>Completed</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+          </div>
         </div>
-        
-        <div style="background: var(--section-bg); padding: 1rem; border-radius: 8px;">
-          <h4 style="color: var(--accent); margin-top: 0;">Frameworks</h4>
-          <ul style="list-style: none; padding: 0;">
-            <li>wxWidgets</li>
-            <li>Android Studio</li>
-            <li>React</li>
-            <li>Node.js</li>
-          </ul>
+        <div class="project-card">
+          <h4><i class="fas fa-video"></i> Breakout</h4>
+          <p>A web series idea with gritty tales of ambition, planning a free GitHub Pages prototype.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
         </div>
-        
-        <div style="background: var(--section-bg); padding: 1rem; border-radius: 8px;">
-          <h4 style="color: var(--accent); margin-top: 0;">Technologies</h4>
-          <ul style="list-style: none; padding: 0;">
-            <li>Blockchain</li>
-            <li>AI/ML</li>
-            <li>Quantum Computing</li>
-            <li>IoT</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <h2>CONTACT ME</h2>
-      <p>Ready to collaborate? Reach out through any of these channels:</p>
-      <ul>
-        <li><strong>Phone</strong>: 224-828-9966</li>
-        <li><strong>Email</strong>: <a href="mailto:sjsmith5@student.fullsail.edu" style="color: var(--accent);">sjsmith5@student.fullsail.edu</a></li>
-        <li><strong>Personal Email</strong>: <a href="mailto:djtrippiepea@gmail.com" style="color: var(--accent);">djtrippiepea@gmail.com</a></li>
-        <li><strong>Facebook</strong>: <a href="https://www.facebook.com/therealestablishedportal/" style="color: var(--accent);">facebook.com/therealestablishedportal</a></li>
-        <li><strong>Instagram</strong>: <a href="https://www.instagram.com/therealestablishedportal/" style="color: var(--accent);">instagram.com/therealestablishedportal</a></li>
-        <li><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/hrptechadvisor/" style="color: var(--accent);">linkedin.com/in/hrptechadvisor</a></li>
-        <li><strong>X</strong>: <a href="https://x.com/DJTrippiePea" style="color: var(--accent);">x.com/DJTrippiePea</a></li>
-        <li><strong>YouTube</strong>: <a href="https://www.youtube.com/@djtrippiepea" style="color: var(--accent);">youtube.com/@djtrippiepea</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer style="text-align: center; padding: 2rem; background: rgba(0,0,0,0.9); margin-top: 4rem; border-top: 1px solid rgba(0, 255, 204, 0.2);">
-    <p>&copy; 2025 The Real Established Portal. All systems operational.</p>
-    <div style="margin-top: 1rem;">
-      <span class="tech-badge">HTML5</span>
-      <span class="tech-badge">CSS3</span>
-      <span class="tech-badge">JavaScript</span>
-      <span class="tech-badge">Web3</span>
-      <span class="tech-badge">AI</span>
-    </div>
-  </footer>
-
-  <script>
-    // Menu functionality
-    document.getElementById('menu-button').addEventListener('click', function() {
-      const menu = document.createElement('div');
-      menu.style.position = 'fixed';
-      menu.style.top = '60px';
-      menu.style.right = '20px';
-      menu.style.background = 'rgba(0,0,0,0.95)';
-      menu.style.padding = '1.5rem';
-      menu.style.border = '1px solid var(--primary)';
-      menu.style.borderRadius = '8px';
-      menu.style.zIndex = '1000';
-      menu.style.boxShadow = '0 0 20px rgba(255, 204, 0, 0.5)';
-      menu.style.backdropFilter = 'blur(10px)';
-      
-      menu.innerHTML = `
-        <a href="#content" style="display: block; padding: 0.7rem; color: var(--primary); border-bottom: 1px solid rgba(255,204,0,0.2);">⌂ Home</a>
-        <a href="#music" style="display: block; padding: 0.7rem; color: var(--primary); border-bottom: 1px solid rgba(255,204,0,0.2);">♫ Music</a>
-        <a href="#projects" style="display: block; padding: 0.7rem; color: var(--primary); border-bottom: 1px solid rgba(255,204,0,0.2);">⚙ Projects</a>
-        <a href="#contact" style="display: block; padding: 0.7rem; color: var(--primary);">✉ Contact</a>
-      `;
-      
-      document.body.appendChild(menu);
-      
-      // Close menu when clicking outside
-      const closeMenu = function(e) {
-        if (!menu.contains(e.target) && e.target.id !== 'menu-button') {
-          document.body.removeChild(menu);
-          document.removeEventListener('click', closeMenu);
-        }
-      };
-      
-      setTimeout(() => {
-        document.addEventListener('click', closeMenu);
-      }, 10);
-    });
-
-    // Animate elements when they come into view
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.project-card, h2, .section').forEach(el => {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'all 0.6s ease-out';
-      observer.observe(el);
-    });
-  </script>
-</body>
-</html>
