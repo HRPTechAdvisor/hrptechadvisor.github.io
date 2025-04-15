@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Real Established Portal</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -10,10 +10,11 @@
       margin: 0;
       padding: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #1a1a1a;
+      background: url('images/recordback.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       line-height: 1.6;
-      text-align: center; /* Center all text by default */
+      text-align: center;
     }
     header {
       position: fixed;
@@ -73,16 +74,16 @@
     img {
       max-width: 100%;
       height: auto;
-      margin: 1rem auto; /* Center images */
-      display: block; /* Ensure block-level centering */
+      margin: 1rem auto;
+      display: block;
       border: 2px solid #ffcc00;
     }
     iframe {
       width: 100%;
       max-width: 560px;
       height: 315px;
-      margin: 1rem auto; /* Center video */
-      display: block; /* Ensure block-level centering */
+      margin: 1rem auto;
+      display: block;
       border: 2px solid #ffcc00;
     }
     footer {
@@ -93,6 +94,31 @@
     .section {
       margin-bottom: 3rem;
     }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #ffcc00;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .twitch-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #ffcc00;
+    }
+    .twitch-link img {
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -101,6 +127,22 @@
     <button>OPEN MENU</button>
   </header>
   <main id="content">
+    <div class="section">
+      <h2>FEATURED MUSIC</h2>
+      <p>Listen to original tracks produced by Sean J. Smith DJTP:</p>
+      <iframe
+        src="https://www.bandlab.com/embed/?id=064f87ed-b119-f011-aaa7-0022484892d6" 
+        allowfullscreen>
+      </iframe>
+
+      <p>Also check out more music on Soundtrap:</p>
+      <iframe 
+        src="https://www.soundtrap.com/studio/vp_yZrR5Riu5wLqDEoinWw/" 
+        allow="microphone; camera" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
     <h1>THE REAL ESTABLISHED PORTAL</h1>
     <p>Where tech meets grit—crafting real solutions and stories that resonate.</p>
     <img src="RPrealestablished.jpg" alt="The Real Established Portal Logo">
@@ -130,6 +172,28 @@
     </div>
 
     <div class="section">
+      <h2>VISUAL VIBES</h2>
+      <div class="image-grid">
+        <img src="images/me.jpg" alt="Sean J. Smith">
+        <img src="images/flag.jpg" alt="Flag Vibe">
+        <img src="images/realportal.jpg" alt="The Real Portal">
+        <img src="images/d7d10a88-c36c-4e29-a9b8-3c83c5726e6d.png" alt="The Real Est. Portal Logo">
+      </div>
+    </div>
+
+    <!-- New Twitch section -->
+    <div class="section">
+      <h2>JOIN ME LIVE ON TWITCH</h2>
+      <p>Catch me streaming live on Twitch! Join the fun and interact with me in real-time:</p>
+      <div class="twitch-link">
+        <a href="https://www.twitch.tv/djtrippiepea" target="_blank">
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/3fb2ba73-f9ef-49c8-a990-2810512f5dd4-profile_image-70x70.png" alt="DJTrippiePea Profile Picture" width="70" height="70">
+          <span>Follow me on Twitch @DJTrippiePea</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
       <h2>FREQUENTLY ASKED QUESTIONS</h2>
       <ul>
         <li><strong>Need a website?</strong> I’ll build it free with GitHub Pages—hit me up!</li>
@@ -152,16 +216,9 @@
         <li><strong>YouTube</strong>: <a href="https://www.youtube.com/@djtrippiepea">youtube.com/@djtrippiepea</a></li>
       </ul>
     </div>
-
-    <div class="section">
-      <h2>FEATURED VIDEO</h2>
-      <p>Check out this glimpse into my creative and tech world:</p>
-      <iframe src="https://www.youtube.com/embed/jup9oaq7CV0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
   </main>
   <footer>
-    <p>FOLLOW @REALPORTALVIBES FOR THE REAL STUFF</p>
-    <p>Built by Sean J. Smith DJTP | Hosted on GitHub Pages</p>
+    <p>&copy; 2025 The Real Established Portal. All rights reserved.</p>
   </footer>
 </body>
 </html>
