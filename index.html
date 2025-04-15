@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta property="og:title" content="Sean J. Smith DJTP | Visionary Technologist">
   <meta property="og:description" content="Where tech meets grit—crafting real solutions and stories that resonate.">
-  <meta property="og:image" content="https://hrptechadvisor.github.io/images/me.jpg">
+  <meta property="og:image" content="https://hrptechadvisor.github.io/images/RPrealestablished.jpg">
   <meta property="og:url" content="https://hrptechadvisor.github.io">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sean J. Smith DJTP | Visionary Technologist">
   <meta name="twitter:description" content="Where tech meets grit—crafting real solutions and stories that resonate.">
-  <meta name="twitter:image" content="https://hrptechadvisor.github.io/images/me.jpg">
+  <meta name="twitter:image" content="https://hrptechadvisor.github.io/images/RPrealestablished.jpg">
   <meta name="keywords" content="Sean J. Smith DJTP, tech portfolio, app development, blockchain, AI, cryptocurrency">
   <title>🚀 Sean J. Smith DJTP | Visionary Technologist</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@700&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
@@ -241,6 +241,10 @@
     .image-grid img:nth-child(2) { animation-delay: 0.2s; }
     .image-grid img:nth-child(3) { animation-delay: 0.3s; }
     .image-grid img:nth-child(4) { animation-delay: 0.4s; }
+    .image-grid img:nth-child(5) { animation-delay: 0.5s; }
+    .image-grid img:nth-child(6) { animation-delay: 0.6s; }
+    .image-grid img:nth-child(7) { animation-delay: 0.7s; }
+    .image-grid img:nth-child(8) { animation-delay: 0.8s; }
     
     @keyframes fadeInImg {
       from { opacity: 0; }
@@ -295,6 +299,11 @@
       box-shadow: 0 0 10px #ff66cc;
     }
     
+    .status-ongoing {
+      background: #ff9900;
+      box-shadow: 0 0 10px #ff9900;
+    }
+    
     .twitch-link {
       display: flex;
       align-items: center;
@@ -307,6 +316,14 @@
     .twitch-link img {
       border-radius: 50%;
       margin-right: 1rem;
+    }
+    
+    .section {
+      background: var(--section-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      border-left: 4px solid var(--primary);
     }
     
     footer {
@@ -338,11 +355,15 @@
     <nav>
       <a href="#hero">Home</a>
       <a href="#music">Music</a>
+      <a href="#about">About</a>
       <a href="#ventures">Ventures</a>
-      <a href="#projects">Projects</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#projects">Current Projects</a>
+      <a href="#future-projects">Future Projects</a>
+      <a href="#completed-projects">Completed Projects</a>
       <a href="#skills">Skills</a>
-      <a href="#vision">Vision</a>
+      <a href="#visual-vibes">Visual Vibes</a>
+      <a href="#twitch">Twitch</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -351,13 +372,12 @@
     <section id="hero">
       <h1>Sean J. Smith DJTP</h1>
       <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
-        Building the future through disruptive technology ventures, innovative apps, 
-        and decentralized systems that bridge the physical and digital worlds.
+        Where tech meets grit—crafting real solutions and stories that resonate.
       </p>
       <img src="images/me.jpg" alt="Sean J. Smith" style="width: 200px; border-radius: 50%; margin: 2rem auto; border: 3px solid var(--primary);">
     </section>
 
-    <section id="music">
+    <section id="music" class="section">
       <h2>🎵 Featured Music</h2>
       <p>Listen to original tracks produced by Sean J. Smith DJTP:</p>
       <iframe
@@ -374,17 +394,15 @@
       </iframe>
     </section>
 
-    <section id="about">
+    <section id="about" class="section">
       <h2>ℹ️ Who I Am</h2>
-      <div style="background: var(--section-bg); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary);">
-        <p>
-          I'm Sean J. Smith DJTP, founder of The Real Established Portal. With an Associate’s from Full Sail University and a PhD in progress, I’m wired for tech and driven to innovate. I build websites, self-study at Harvard University’s CS50 program fully free online (through this <a href="https://cs50.harvard.edu/x/2025/">CS50</a>), solve tech challenges, and craft authentic narratives—all with zero budget and maximum hustle. I also write insightful <a href="https://medium.com/@djtrippiepea">blog posts on Medium</a> about tech and innovation. Let’s create something bold together.
-        </p>
-        <img src="images/Reprealdiamn.jpg" alt="Diamond Project Image">
-      </div>
+      <p>
+        I'm Sean J. Smith DJTP, founder of The Real Established Portal. With an Associate’s from Full Sail University and a PhD in progress, I’m wired for tech and driven to innovate. I build websites, self-study at Harvard University’s CS50 program fully free online (through this <a href="https://cs50.harvard.edu/x/2020/psets/1/hello/">CS50 link</a>), solve tech challenges, and craft authentic narratives—all with zero budget and maximum hustle. I also write insightful posts on <a href="https://medium.com/@djtrippiepea">Medium</a> about tech and innovation. Let’s create something bold together.
+      </p>
+      <img src="images/Reprealdiamn.jpg" alt="Diamond Project Image">
     </section>
 
-    <section id="ventures">
+    <section id="ventures" class="section">
       <h2>🚀 My Ventures</h2>
       <div class="project-showcase">
         <div class="project-card">
@@ -427,9 +445,36 @@
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="section">
       <h2>🛠️ Current Projects</h2>
       <div class="project-showcase">
+        <div class="project-card">
+          <h3><i class="fas fa-brain"></i> The Portal</h3>
+          <p>An all-in-one app for health tracking, smart shopping, life coaching, and AI-driven insights, featuring health & nutrition scanners, shopping assistance, gas price finder, and premium services. Currently in wireframe stage using FigJam.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Swift</span>
+            <span class="tech-badge">Kotlin</span>
+            <span class="tech-badge">ML</span>
+            <span class="tech-badge">FigJam</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-utensils"></i> Nutrition Tracker</h3>
+          <p>An app to track and manage nutrition, integrating features like food scanning and personalized health recommendations.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Flutter</span>
+            <span class="tech-badge">Firebase</span>
+            <span class="tech-badge">AI</span>
+          </div>
+        </div>
         <div class="project-card">
           <h3><i class="fas fa-heartbeat"></i> WellnessPro App</h3>
           <p>Comprehensive wellness platform for PHP providers and fitness coaches featuring AI-driven health insights, client management, and treatment tracking.</p>
@@ -457,34 +502,20 @@
           </div>
         </div>
         <div class="project-card">
-          <h3><i class="fas fa-brain"></i> The Portal</h3>
-          <p>An all-in-one app for health tracking, smart shopping, life coaching, and AI-driven insights, featuring health & nutrition scanners, shopping assistance, and premium services.</p>
+          <h3><i class="fas fa-briefcase"></i> LinkedIn Profile & Resume Development</h3>
+          <p>Building a standout LinkedIn profile and resume showcasing skills and achievements, aiming to surpass industry benchmarks.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-in-progress"></span>
             <span>In Development</span>
           </div>
           <div class="tech-badges">
-            <span class="tech-badge">Swift</span>
-            <span class="tech-badge">Kotlin</span>
-            <span class="tech-badge">ML</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <h3><i class="fas fa-utensils"></i> Nutrition Tracker</h3>
-          <p>An app to track and manage nutrition, integrating features like food scanning and personalized health recommendations.</p>
-          <div style="margin: 1rem 0;">
-            <span class="status-indicator status-in-progress"></span>
-            <span>In Development</span>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">Flutter</span>
-            <span class="tech-badge">Firebase</span>
-            <span class="tech-badge">AI</span>
+            <span class="tech-badge">LinkedIn</span>
+            <span class="tech-badge">Documentation</span>
           </div>
         </div>
         <div class="project-card">
           <h3><i class="fas fa-calculator"></i> Calculator Application</h3>
-          <p>A calculator app built with a button factory, processor singleton, and exception handling, using the Shunting Yard Algorithm.</p>
+          <p>A calculator app built with a button factory, processor singleton, and exception handling, using the Shunting Yard Algorithm. Facing challenges with expression parsing.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-in-progress"></span>
             <span>In Development</span>
@@ -495,7 +526,7 @@
           </div>
         </div>
         <div class="project-card">
-          <h3><i class="fas fa-mobile-alt"></i> Android Studio Practice</h3>
+          <h3><i class="fas fa-mobile-alt"></i> Android Studio Practice Project</h3>
           <p>Developing an Android app with rounded corners, layout refinement, and accessibility improvements.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-in-progress"></span>
@@ -507,28 +538,52 @@
           </div>
         </div>
         <div class="project-card">
-          <h3><i class="fas fa-briefcase"></i> LinkedIn & Resume</h3>
-          <p>Building a standout LinkedIn profile and resume showcasing skills and achievements in tech and innovation.</p>
+          <h3><i class="fas fa-video"></i> Breakout</h3>
+          <p>A web series idea with gritty tales of ambition, planning a free GitHub Pages prototype.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-in-progress"></span>
             <span>In Development</span>
           </div>
           <div class="tech-badges">
-            <span class="tech-badge">LinkedIn</span>
-            <span class="tech-badge">Documentation</span>
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-pen"></i> Blog Posts on Medium</h3>
+          <p>Writing insightful blog posts on computer science, technology, and ongoing projects.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-ongoing"></span>
+            <span>Ongoing</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">Writing</span>
+            <span class="tech-badge">Medium</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-flask"></i> Lab Projects</h3>
+          <p>Academic labs including Calculator Button Factory, Processor Singleton, Calculator Tests, and LED Brightness Optimization.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+          <div class="tech-badges">
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">Embedded C</span>
+            <span class="tech-badge">Xilinx</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="portfolio">
-      <h2>💼 Complete Portfolio</h2>
-      
-      <h3 style="color: var(--accent); margin-top: 2rem;">Upcoming Projects</h3>
+    <section id="future-projects" class="section">
+      <h2>📅 Future Projects</h2>
       <div class="project-showcase">
         <div class="project-card">
-          <h4><i class="fas fa-chart-line"></i> Stock Prediction App</h4>
-          <p>A simple stock prediction app with a search bar for users to receive predictions for various time intervals.</p>
+          <h3><i class="fas fa-chart-line"></i> Stock Prediction App</h3>
+          <p>A simple stock prediction app with a search bar for users to receive predictions for various time intervals (1 minute to 1 year).</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-planned"></span>
             <span>Planned</span>
@@ -539,8 +594,8 @@
           </div>
         </div>
         <div class="project-card">
-          <h4><i class="fas fa-coins"></i> Portal Eco Coin (PEC)</h4>
-          <p>A cryptocurrency project focused on sustainability and eco-friendly applications.</p>
+          <h3><i class="fas fa-coins"></i> Portal Eco Coin (PEC)</h3>
+          <p>A cryptocurrency project named Portal Eco Coin, focused on sustainability and eco-friendly applications.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-planned"></span>
             <span>Planned</span>
@@ -551,8 +606,8 @@
           </div>
         </div>
         <div class="project-card">
-          <h4><i class="fas fa-robot"></i> AI Education Discord Bot</h4>
-          <p>A proposal for AI integration in education, using a Discord bot with custom knowledge base and academic integrity rules.</p>
+          <h3><i class="fas fa-robot"></i> AI Integration for Education</h3>
+          <p>A proposal for AI integration in education, using a Discord bot with custom knowledge base, SharePoint and GitHub integration, and academic integrity rules.</p>
           <div style="margin: 1rem 0;">
             <span class="status-indicator status-proposal"></span>
             <span>Proposal Stage</span>
@@ -563,67 +618,7 @@
             <span class="tech-badge">AI</span>
           </div>
         </div>
-      </div>
-      
-      <h3 style="color: var(--accent); margin-top: 2rem;">Completed Projects</h3>
-      <div class="project-showcase">
         <div class="project-card">
-          <h4><i class="fas fa-home"></i> Landlord Community App</h4>
-          <p>A community app designed for landlords to manage properties and communicate with tenants.</p>
-          <div style="margin: 1rem 0;">
-            <span class="status-indicator status-completed"></span>
-            <span>Completed</span>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">Node.js</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <h4><i class="fas fa-gamepad"></i> Conway's Game of Life</h4>
-          <p>A simulation of Conway’s Game of Life, a cellular automaton that evolves based on set rules.</p>
-          <div style="margin: 1rem 0;">
-            <span class="status-indicator status-completed"></span>
-            <span>Completed</span>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Pygame</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <h4><i class="fas fa-code"></i> GDScript Projects</h4>
-          <p>Multiple game development projects using Godot Engine and GDScript.</p>
-          <div style="margin: 1rem 0;">
-            <span class="status-indicator status-completed"></span>
-            <span>Completed</span>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">GDScript</span>
-            <span class="tech-badge">Godot</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <h4><i class="fas fa-film"></i> Street Echoes</h4>
-          <p>A short film shot on my phone, capturing raw city vibes, with a promo site built using HTML/CSS.</p>
-          <div style="margin: 1rem 0;">
-            <span class="status-indicator status-completed"></span>
-            <span>Completed</span>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">HTML</span>
-            <span class="tech-badge">CSS</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <h4><i class="fas fa-video"></i> Breakout</h4>
-          <p>A web series idea with gritty tales of ambition, planning a free GitHub Pages prototype.</p>
-          <div style="margin: 1rem 0;">
-            <span class="status-indicator status-in-progress"></span>
-            <span>In Development</span>
-          </div>
-          <div class="tech-badges">
-            <span class="tech-badge">HTML</span>
-            <span class="tech-badge">CSS</span>
-            <span class="tech-badge">JavaScript</span>
-          </
+          <h3><i class="fas fa-chart-line"></i> QuantumPredict</h3>
+          <p>AI-powered stock prediction engine using quantum computing principles for unprecedented market forecasting accuracy.</p>
+          <div style="margin: 1
