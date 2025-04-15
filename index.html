@@ -38,6 +38,7 @@
       color: var(--light);
       line-height: 1.8;
       overflow-x: hidden;
+      text-align: center;
     }
     
     header {
@@ -65,22 +66,30 @@
       100% { border-bottom-color: rgba(255, 0, 170, 0.5); }
     }
     
+    header nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
     header nav a {
       color: var(--primary);
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       font-size: 1rem;
       padding: 0.5rem 1rem;
       transition: all 0.3s ease;
+      border-radius: 5px;
     }
     
     header nav a:hover {
       color: var(--light);
+      background: rgba(0, 255, 204, 0.2);
       transform: scale(1.05);
     }
     
     main {
-      padding: 8rem 2rem 4rem;
+      padding: 8rem 1rem 4rem;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -89,17 +98,19 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
-      margin: 3rem 0;
+      margin: 3rem auto;
     }
     
     .project-card {
       background: var(--section-bg);
       border-radius: 12px;
       padding: 1.5rem;
-      border: 1px solid rgba(0, 255, 204, 0.2);
+      border: 1px solid rgba(0, 255, 204, 0.3);
       transition: all 0.4s ease;
       position: relative;
       overflow: hidden;
+      margin: 0 auto;
+      max-width: 350px;
     }
     
     .project-card::before {
@@ -121,7 +132,7 @@
     
     .project-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(0, 255, 204, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
       border-color: var(--primary);
     }
     
@@ -129,16 +140,18 @@
       font-family: 'Orbitron', sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     h1 {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       background: linear-gradient(90deg, var(--primary), var(--accent));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       margin-bottom: 1.5rem;
-      text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+      text-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
       animation: pulse 2.5s infinite alternate;
     }
     
@@ -148,21 +161,24 @@
     }
     
     h2 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       color: var(--primary);
-      margin: 3rem 0 1.5rem;
+      margin: 3rem auto 1.5rem;
       position: relative;
       display: inline-block;
+      max-width: 100%;
     }
     
     h2::after {
       content: '';
       position: absolute;
       width: 100%;
-      height: 3px;
+      height: 4px;
       bottom: -10px;
       left: 0;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: translateX(-50%);
+      left: 50%;
     }
     
     h3, h4 {
@@ -172,6 +188,8 @@
     
     p, li {
       font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
     
     a {
@@ -186,6 +204,8 @@
     ul {
       list-style: none;
       padding: 0;
+      max-width: 800px;
+      margin: 0 auto;
     }
     
     ul li:before {
@@ -200,6 +220,7 @@
       display: block;
       border: 2px solid var(--primary);
       transition: all 0.5s ease;
+      border-radius: 8px;
     }
     
     img:hover {
@@ -214,13 +235,15 @@
       margin: 1rem auto;
       display: block;
       border: 2px solid var(--primary);
+      border-radius: 8px;
     }
     
     .image-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
-      margin-top: 1rem;
+      margin: 2rem auto;
+      max-width: 1000px;
     }
     
     .image-grid img {
@@ -248,8 +271,8 @@
     .image-grid img:nth-child(9) { animation-delay: 0.9s; }
     
     @keyframes fadeInImg {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     
     .tech-badge {
@@ -257,10 +280,10 @@
       background: rgba(0,0,0,0.5);
       border: 1px solid var(--primary);
       color: var(--primary);
-      padding: 0.4rem 1rem;
+      padding: 0.5rem 1.2rem;
       border-radius: 20px;
-      margin: 0.3rem;
-      font-size: 0.8rem;
+      margin: 0.4rem;
+      font-size: 0.9rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: all 0.3s ease;
@@ -274,8 +297,8 @@
     
     .status-indicator {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       margin-right: 8px;
     }
@@ -321,10 +344,24 @@
     
     .section {
       background: var(--section-bg);
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 12px;
-      margin-bottom: 3rem;
+      margin: 2rem auto;
       border-left: 4px solid var(--primary);
+      max-width: 1000px;
+    }
+    
+    .highlight-section {
+      background: linear-gradient(135deg, rgba(0, 255, 204, 0.1), rgba(255, 0, 170, 0.1));
+      border: 2px solid var(--primary);
+      box-shadow: var(--neon-glow);
+      padding: 3rem;
+      animation: glowFade 4s infinite alternate;
+    }
+    
+    @keyframes glowFade {
+      0% { box-shadow: 0 0 10px var(--primary); }
+      100% { box-shadow: 0 0 20px var(--primary), 0 0 30px var(--secondary); }
     }
     
     footer {
@@ -337,17 +374,18 @@
     
     @media (max-width: 768px) {
       header nav a {
-        margin: 0 0.5rem;
+        margin: 0.3rem 0.5rem;
         font-size: 0.9rem;
       }
-      h1 { font-size: 2.5rem; }
-      h2 { font-size: 1.8rem; }
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 2rem; }
       h3 { font-size: 1.4rem; }
       iframe { height: 200px; }
       .project-showcase { grid-template-columns: 1fr; }
       .image-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       }
+      .section, .highlight-section { padding: 1.5rem; }
     }
   </style>
 </head>
@@ -355,14 +393,14 @@
   <header>
     <nav>
       <a href="#hero">Home</a>
-      <a href="#music">Music</a>
+      <a href="#skills">Skills</a>
       <a href="#about">About</a>
       <a href="#what-i-do">What I Do</a>
       <a href="#ventures">Ventures</a>
       <a href="#projects">Current Projects</a>
       <a href="#future-projects">Future Projects</a>
       <a href="#completed-projects">Completed Projects</a>
-      <a href="#skills">Skills</a>
+      <a href="#music">Music</a>
       <a href="#visual-vibes">Visual Vibes</a>
       <a href="#twitch">Twitch</a>
       <a href="#faq">FAQ</a>
@@ -371,37 +409,42 @@
   </header>
 
   <main>
-    <section id="hero">
+    <section id="hero" class="section">
       <h1>Sean J. Smith DJTP</h1>
-      <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+      <p style="font-size: 1.3rem;">
         Where tech meets grit—crafting real solutions and stories that resonate.
       </p>
       <img src="me.jpg" alt="Sean J. Smith" style="width: 200px; border-radius: 50%; margin: 2rem auto; border: 3px solid var(--primary);">
     </section>
 
-    <section id="music" class="section">
-      <h2>🎵 Featured Music</h2>
-      <p>Listen to original tracks produced by Sean J. Smith DJTP:</p>
-      <iframe
-        src="https://www.bandlab.com/embed/?id=064f87ed-b119-f011-aaa7-0022484892d6"
-        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-        allowfullscreen>
-      </iframe>
-      <p>Also check out more music on Soundtrap:</p>
-      <Iframe 
-        src="https://www.soundtrap.com/studio/vp_yZrR5Riu5wLqDEoinWw/"
-        sandbox="allow-same-origin allow-scripts allow-popups allow-forms" 
-        allow="microphone; camera" 
-        allowfullscreen>
-      </iframe>
+    <section id="skills" class="section highlight-section">
+      <h2>💡 Skills & Experience</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+        Mastering the art of code to build innovative solutions that push boundaries.
+      </p>
+      <ul>
+        <li><strong>App Design & Development:</strong> Building functional and user-friendly apps (e.g., The Portal, Nutrition Tracker)</li>
+        <li><strong>Project Management:</strong> Creating roadmaps, timelines, and breaking down tasks into manageable steps</li>
+        <li><strong>Cryptocurrency & Blockchain:</strong> Creating and planning for Portal Eco Coin</li>
+        <li><strong>AI & Education:</strong> Proposing AI integration projects for educational purposes with a focus on academic integrity</li>
+        <li><strong>Software Development & Testing:</strong> Working with Shunting Yard Algorithm, exception handling, and unit testing</li>
+        <li><strong>UI/UX Design:</strong> Refining layouts for better accessibility, usability, and visual consistency (e.g., Android app)</li>
+      </ul>
+      <h3>Tools & Technologies</h3>
+      <ul>
+        <li><strong>Languages:</strong> C++, Python, Java, JavaScript, GDScript</li>
+        <li><strong>Frameworks:</strong> wxWidgets, Android Studio</li>
+        <li><strong>Software:</strong> Visual Studio, Visual Studio Code, GitHub, SharePoint, Xilinx ISE</li>
+        <li><strong>Platforms:</strong> Full Sail University, Medium, LinkedIn</li>
+      </ul>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section highlight-section">
       <h2>ℹ️ Who I Am</h2>
-      <p>
+      <p style="font-size: 1.2rem;">
         Sean J. Smith DJTP, founder of The Real Established Portal. With an Associate’s from Full Sail University and a PhD in progress, I’m wired for tech and driven to innovate. I’ve honed my coding skills and DIY spirit to turn ideas into reality—ready for your next gig.
       </p>
-      <img src="Reprealdiamn.jpg" alt="Diamond Project Image">
+      <img src="Reprealdiamn.jpg" alt="Diamond Project Image" style="max-width: 300px;">
     </section>
 
     <section id="what-i-do" class="section">
@@ -697,23 +740,16 @@
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <h2>💡 Skills & Experience</h2>
-      <ul>
-        <li><strong>App Design & Development:</strong> Building functional and user-friendly apps (e.g., The Portal, Nutrition Tracker)</li>
-        <li><strong>Project Management:</strong> Creating roadmaps, timelines, and breaking down tasks into manageable steps</li>
-        <li><strong>Cryptocurrency & Blockchain:</strong> Creating and planning for Portal Eco Coin</li>
-        <li><strong>AI & Education:</strong> Proposing AI integration projects for educational purposes with a focus on academic integrity</li>
-        <li><strong>Software Development & Testing:</strong> Working with Shunting Yard Algorithm, exception handling, and unit testing</li>
-        <li><strong>UI/UX Design:</strong> Refining layouts for better accessibility, usability, and visual consistency (e.g., Android app)</li>
-      </ul>
-      <h3>Tools & Technologies</h3>
-      <ul>
-        <li><strong>Languages:</strong> C++, Python, Java, JavaScript, GDScript</li>
-        <li><strong>Frameworks:</strong> wxWidgets, Android Studio</li>
-        <li><strong>Software:</strong> Visual Studio, Visual Studio Code, GitHub, SharePoint, Xilinx ISE</li>
-        <li><strong>Platforms:</strong> Full Sail University, Medium, LinkedIn</li>
-      </ul>
+    <section id="music" class="section">
+      <h2>🎵 Featured Music</h2>
+      <p>Listen to original tracks produced by Sean J. Smith DJTP:</p>
+      <iframe
+        src="https://www.bandlab.com/embed/?id=064f87ed-b119-f011-aaa7-0022484892d6"
+        sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+        allowfullscreen>
+      </iframe>
+      <p>Also check out more music on YouTube:</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/jup9oaq7CV0?si=9rO0aKRbSs612dcF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 
     <section id="visual-vibes" class="section">
@@ -721,7 +757,9 @@
       <div class="image-grid">
         <img src="RPrealestablished.jpg" alt="Real Established Logo">
         <img src="Repdiamondsreal.jpg" alt="Diamonds Real Image">
+        <img src="flag.jpg" alt="Flag Image">
         <img src="minrep.jpg" alt="Minimal REP Image">
+        <img src="realportal.jpg" alt="Real Portal Image">
         <img src="repdiamondreal.jpg" alt="REP Diamond Real Image">
       </div>
     </section>
@@ -755,6 +793,7 @@
         <li>LinkedIn: <a href="https://linkedin.com/in/hrptechadvisor" target="_blank">linkedin.com/in/hrptechadvisor</a></li>
         <li>X: <a href="https://x.com/DJTrippiePea" target="_blank">x.com/DJTrippiePea</a></li>
         <li>YouTube: <a href="https://youtube.com/@djtrippiepea" target="_blank">youtube.com/@djtrippiepea</a></li>
+        <li>YouTube: <a href="https://www.twitch.tv/djtrippiepea" target="_blank">www.twitch.tv/djtrippiepea</a></li>
       </ul>
     </section>
   </main>
