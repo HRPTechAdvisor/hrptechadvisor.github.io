@@ -29,7 +29,6 @@
       overflow-x: hidden;
     }
     
-    /* Futuristic header with animated border */
     header {
       position: fixed;
       top: 0;
@@ -55,14 +54,12 @@
       100% { border-bottom-color: rgba(255, 0, 170, 0.5); }
     }
     
-    /* Main content with futuristic sections */
     main {
       padding: 8rem 2rem 4rem;
       max-width: 1200px;
       margin: 0 auto;
     }
     
-    /* Project showcase with holographic effect */
     .project-showcase {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -103,7 +100,6 @@
       border-color: var(--primary);
     }
     
-    /* Futuristic typography */
     h1, h2, h3 {
       font-family: 'Orbitron', sans-serif;
       text-transform: uppercase;
@@ -139,7 +135,6 @@
       background: linear-gradient(90deg, var(--primary), var(--secondary));
     }
     
-    /* Animated tech badges */
     .tech-badge {
       display: inline-block;
       background: rgba(0,0,0,0.5);
@@ -160,7 +155,43 @@
       transform: scale(1.1);
     }
     
-    /* Responsive design */
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem auto;
+      display: block;
+      border: 2px solid var(--primary);
+      transition: all 0.5s ease;
+    }
+    
+    img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px var(--primary);
+    }
+    
+    .status-indicator {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    
+    .status-planned {
+      background: #ffcc00;
+      box-shadow: 0 0 10px #ffcc00;
+    }
+    
+    .status-in-progress {
+      background: #00ccff;
+      box-shadow: 0 0 10px #00ccff;
+    }
+    
+    .status-completed {
+      background: #00ff66;
+      box-shadow: 0 0 10px #00ff66;
+    }
+    
     @media (max-width: 768px) {
       h1 { font-size: 2.5rem; }
       h2 { font-size: 1.8rem; }
@@ -174,6 +205,7 @@
       <a href="#vision">Vision</a>
       <a href="#ventures">Ventures</a>
       <a href="#projects">Projects</a>
+      <a href="#portfolio">Full Portfolio</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -198,6 +230,7 @@
             <span class="tech-badge">Unity</span>
             <span class="tech-badge">Unreal</span>
             <span class="tech-badge">WebGL</span>
+            <span class="tech-badge">GDScript</span>
           </div>
         </div>
         
@@ -239,6 +272,10 @@
         <div class="project-card">
           <h3><i class="fas fa-heartbeat"></i> WellnessPro App</h3>
           <p>Comprehensive wellness platform for PHP providers and fitness coaches featuring AI-driven health insights, client management, and treatment tracking.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
           <div class="tech-badges">
             <span class="tech-badge">Flutter</span>
             <span class="tech-badge">Firebase</span>
@@ -249,6 +286,10 @@
         <div class="project-card">
           <h3><i class="fas fa-home"></i> RentEase Platform</h3>
           <p>Blockchain-based property management system connecting landlords and tenants with smart contracts, automated payments, and maintenance tracking.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
           <div class="tech-badges">
             <span class="tech-badge">React</span>
             <span class="tech-badge">Solidity</span>
@@ -259,6 +300,10 @@
         <div class="project-card">
           <h3><i class="fas fa-chart-line"></i> QuantumPredict</h3>
           <p>AI-powered stock prediction engine using quantum computing principles for unprecedented market forecasting accuracy.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-planned"></span>
+            <span>Planned</span>
+          </div>
           <div class="tech-badges">
             <span class="tech-badge">Python</span>
             <span class="tech-badge">TensorFlow</span>
@@ -269,11 +314,158 @@
         <div class="project-card">
           <h3><i class="fas fa-brain"></i> The Portal OS</h3>
           <p>Life management ecosystem combining health tracking, smart shopping, AI coaching, and financial tools into one seamless experience.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
           <div class="tech-badges">
             <span class="tech-badge">Swift</span>
             <span class="tech-badge">Kotlin</span>
             <span class="tech-badge">ML</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>💼 Complete Portfolio</h2>
+      
+      <h3 style="color: var(--accent); margin-top: 2rem;">Upcoming Projects</h3>
+      <div class="project-showcase">
+        <div class="project-card">
+          <h4>Nutrition Tracker</h4>
+          <p>AI-powered food scanning and personalized nutrition recommendations with barcode scanning and meal planning.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-in-progress"></span>
+            <span>In Development</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <h4>Portal Eco Coin (PEC)</h4>
+          <p>Sustainable cryptocurrency focused on eco-friendly applications and green blockchain technology.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-planned"></span>
+            <span>Planned</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <h4>AI Education Discord Bot</h4>
+          <p>Academic integrity-focused AI assistant for students with citation generation and knowledge base integration.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-planned"></span>
+            <span>Proposal Stage</span>
+          </div>
+        </div>
+      </div>
+      
+      <h3 style="color: var(--accent); margin-top: 2rem;">Completed Projects</h3>
+      <div class="project-showcase">
+        <div class="project-card">
+          <h4>Landlord Community App</h4>
+          <p>Property management platform connecting landlords with tenants and service providers.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-completed"></span>
+            <span>Completed</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <h4>Conway's Game of Life</h4>
+          <p>Interactive simulation of the classic cellular automaton with customizable rulesets.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-completed"></span>
+            <span>Completed</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <h4>GDScript Projects</h4>
+          <p>Multiple game development projects using Godot Engine and GDScript.</p>
+          <div style="margin: 1rem 0;">
+            <span class="status-indicator status-completed"></span>
+            <span>Completed</span>
+          </div>
+        </div>
+      </div>
+      
+      <h3 style="color: var(--accent); margin-top: 2rem;">Technical Labs</h3>
+      <div class="project-showcase">
+        <div class="project-card">
+          <h4>Calculator Framework</h4>
+          <p>Advanced calculator with button factory, processor singleton, and Shunting Yard Algorithm implementation.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">wxWidgets</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <h4>LED Brightness Optimization</h4>
+          <p>Hardware project optimizing LED arrays for maximum efficiency and minimal power consumption.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">Embedded C</span>
+            <span class="tech-badge">Xilinx</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <h4>Android UI Refinement</h4>
+          <p>Mobile application focusing on accessibility improvements and modern UI principles.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">Android Studio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>🛠️ Technical Skills</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
+        <div style="background: var(--section-bg); padding: 1rem; border-radius: 8px;">
+          <h4 style="color: var(--accent); margin-top: 0;">Languages</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li>C++</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>GDScript</li>
+          </ul>
+        </div>
+        
+        <div style="background: var(--section-bg); padding: 1rem; border-radius: 8px;">
+          <h4 style="color: var(--accent); margin-top: 0;">Frameworks</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li>wxWidgets</li>
+            <li>Android Studio</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Flutter</li>
+          </ul>
+        </div>
+        
+        <div style="background: var(--section-bg); padding: 1rem; border-radius: 8px;">
+          <h4 style="color: var(--accent); margin-top: 0;">Technologies</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li>Blockchain</li>
+            <li>AI/ML</li>
+            <li>Quantum Computing</li>
+            <li>IoT</li>
+            <li>AR/VR</li>
+          </ul>
+        </div>
+        
+        <div style="background: var(--section-bg); padding: 1rem; border-radius: 8px;">
+          <h4 style="color: var(--accent); margin-top: 0;">Tools</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li>Git/GitHub</li>
+            <li>Visual Studio</li>
+            <li>Figma</li>
+            <li>SharePoint</li>
+            <li>Xilinx ISE</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -286,10 +478,11 @@
           Through my ventures and projects, I'm building tools that empower individuals, transform industries, 
           and create new paradigms for how we interact with technology in our daily lives."
         </p>
-        <div style="display: flex; justify-content: center; margin-top: 2rem;">
-          <img src="images/flag.jpg" alt="Vision" style="width: 150px; border-radius: 8px; margin: 0 1rem;">
-          <img src="images/realportal.jpg" alt="Mission" style="width: 150px; border-radius: 8px; margin: 0 1rem;">
-          <img src="images/Repdiamondsreal.jpg" alt="Values" style="width: 150px; border-radius: 8px; margin: 0 1rem;">
+        <div style="display: flex; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+          <img src="images/flag.jpg" alt="Vision" style="width: 150px; border-radius: 8px; margin: 1rem; border: 2px solid var(--primary);">
+          <img src="images/realportal.jpg" alt="Mission" style="width: 150px; border-radius: 8px; margin: 1rem; border: 2px solid var(--primary);">
+          <img src="images/Repdiamondsreal.jpg" alt="Values" style="width: 150px; border-radius: 8px; margin: 1rem; border: 2px solid var(--primary);">
+          <img src="images/minrep.jpg" alt="Work" style="width: 150px; border-radius: 8px; margin: 1rem; border: 2px solid var(--primary);">
         </div>
       </div>
     </section>
@@ -311,10 +504,10 @@
         <div style="background: var(--section-bg); padding: 1.5rem; border-radius: 8px;">
           <h3 style="color: var(--accent); margin-top: 0;"><i class="fas fa-globe"></i> Social</h3>
           <p>
-            <a href="https://linkedin.com/in/hrptechadvisor" style="color: var(--primary); margin-right: 1rem;"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/hrptechadvisor" style="color: var(--primary); margin-right: 1rem;"><i class="fab fa-github"></i></a>
-            <a href="https://x.com/DJTrippiePea" style="color: var(--primary); margin-right: 1rem;"><i class="fab fa-twitter"></i></a>
-            <a href="https://twitch.tv/djtrippiepea" style="color: var(--primary);"><i class="fab fa-twitch"></i></a>
+            <a href="https://linkedin.com/in/hrptechadvisor" style="color: var(--primary); margin-right: 1rem;"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+            <a href="https://github.com/hrptechadvisor" style="color: var(--primary); margin-right: 1rem;"><i class="fab fa-github"></i> GitHub</a><br>
+            <a href="https://x.com/DJTrippiePea" style="color: var(--primary); margin-right: 1rem;"><i class="fab fa-twitter"></i> Twitter/X</a><br>
+            <a href="https://twitch.tv/djtrippiepea" style="color: var(--primary);"><i class="fab fa-twitch"></i> Twitch</a>
           </p>
         </div>
       </div>
@@ -350,32 +543,14 @@
       observer.observe(el);
     });
 
-    // Particle effect for header
-    const header = document.querySelector('header');
-    header.addEventListener('mousemove', (e) => {
-      if (Math.random() > 0.7) { // Only create particles sometimes
-        const particle = document.createElement('div');
-        particle.style.position = 'absolute';
-        particle.style.width = '4px';
-        particle.style.height = '4px';
-        particle.style.background = `hsl(${Math.random() * 60 + 160}, 100%, 50%)`;
-        particle.style.borderRadius = '50%';
-        particle.style.left = `${e.clientX}px`;
-        particle.style.top = `${e.clientY}px`;
-        particle.style.pointerEvents = 'none';
-        particle.style.boxShadow = '0 0 8px currentColor';
-        particle.style.transition = 'all 1s ease-out';
-        
-        document.body.appendChild(particle);
-        
-        setTimeout(() => {
-          particle.style.opacity = '0';
-          particle.style.transform = `translate(${Math.random() * 40 - 20}px, ${Math.random() * 40 - 20}px)`;
-          setTimeout(() => {
-            document.body.removeChild(particle);
-          }, 1000);
-        }, 50);
-      }
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
     });
   </script>
 </body>
